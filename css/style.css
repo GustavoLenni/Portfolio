@@ -1,0 +1,115 @@
+:root {
+  --primary-color: rgba(108, 132, 208, 1);
+  --secondary-color: rgba(88, 108, 170, 1);
+  --dark-color: rgba(34, 34, 34, 1);
+  --text-color: white;
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-color);
+  font-family: var(--font-primary);
+}
+
+.cabecalho {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo-text {
+  font-family: var(--font-primary);
+  font-size: 45px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+}
+
+.text-inicio {
+  font-family: var(--font-secondary);
+  font-size: 49px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.sobre{
+  display: flex;
+  margin-top: 15%;
+}
+.sobre-titulo{
+  font-family: (var(--font-primary));
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 300;
+}
+.sobre .titulo{
+  font-family: var(--font-secondary);
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 600;
+}
+.sobre .sub{
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  font-size: 15px;
+  width: 35%;
+}
+.inicio .sub {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  color: var(--text-color);
+  width: 70%;
+  font-weight: 300;
+  text-align: center;
+  margin: 10px auto; /* Garante a centralização horizontal */
+  line-height: 1.5; /* Melhora o espaçamento entre linhas */
+}
+
+/*Texto degrade*/
+.highlight {
+  font-weight: 700;
+  background-image: linear-gradient(-225deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(40, 60, 100, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
