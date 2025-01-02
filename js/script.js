@@ -1,22 +1,23 @@
-let currentIndex = 0;
-const images = document.querySelectorAll('.imagens img');
-const totalImages = images.length;
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".carrossel .imagens img");
+  let currentIndex = 0;
 
-// Função para mudar as imagens
-function changeImage() {
-  // Esconde a imagem atual
-  images[currentIndex].style.display = 'none';
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove("active");
+      if (i === index) {
+        img.classList.add("active");
+      }
+    });
+  }
 
-  // Atualiza o índice para a próxima imagem
-  currentIndex = (currentIndex + 1) % totalImages;
+  function startCarousel() {
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }, 3000); // Troca a cada 3 segundos
+  }
 
-  // Mostra a próxima imagem
-  images[currentIndex].style.display = 'flex';
-
-}
-
-// Inicia a primeira imagem como visível
-images[currentIndex].style.display = 'flex';
-
-// Muda a imagem a cada 5 segundos
-setInterval(changeImage, 5000);
+  showImage(currentIndex);
+  startCarousel();
+});
