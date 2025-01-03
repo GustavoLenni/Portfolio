@@ -363,6 +363,66 @@ canvas#backgroundCanvas {
   width: 100%;
   height: 100%;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px; /* Menor largura */
+  max-height: 80%; /* Limita a altura para caber na tela */
+  overflow-y: auto; /* Habilita rolagem vertical */
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-video {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 /* Responsividade */
 @media (max-width: 900px) {
   .cards {

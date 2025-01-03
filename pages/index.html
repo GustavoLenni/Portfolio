@@ -78,11 +78,11 @@
         <span class="titulo">Meus Projetos</span>
       </div>
     </section>
-    
+
     <section class="projetos">
       <section class="cards">
         <!-- Primeira fileira -->
-        <div class="card">
+        <div class="card" data-index="0">
           <div class="switch">
             <img
               src="../images/refeitorio-banner.png"
@@ -102,13 +102,10 @@
             </div>
           </div>
           <div class="button">
-            <button class="btn">
-              <i class="animation"></i>Ver Mais<i class="animation"></i>
-            </button>
+            <button class="btn">Ver Mais</button>
           </div>
         </div>
-
-        <div class="card">
+        <div class="card" data-index="1">
           <div class="switch">
             <img
               src="../images/michael-banner.png"
@@ -124,13 +121,11 @@
             </div>
           </div>
           <div class="button">
-            <button class="btn">
-              <i class="animation"></i>Ver Mais<i class="animation"></i>
-            </button>
+            <button class="btn">Ver Mais</button>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-index="2">
           <div class="switch">
             <img
               src="../images/Orcamento-banner.png"
@@ -156,7 +151,7 @@
           </div>
         </div>
         <!-- Segunda fileira -->
-        <div class="card">
+        <div class="card" data-index="3">
           <div class="switch">
             <img
               src="../images/spook-banner.png"
@@ -185,6 +180,82 @@
         </div>
       </section>
     </section>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body">
+          <!-- Conteúdo do modal será carregado dinamicamente -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Selecionar os botões e o modal
+      const buttons = document.querySelectorAll(".btn");
+      const modal = document.getElementById("modal");
+      const modalBody = document.getElementById("modal-body");
+      const closeBtn = document.querySelector(".close-btn");
+
+      // Dados dos projetos (você pode adicionar mais aqui)
+      const projectDetails = [
+        {
+          title: "Refeitório",
+          image: "../images/refeitorio-banner.png",
+          video: "../videos/refeitorio-demo.mp4",
+          description:
+            "O projeto Refeitório ajuda a melhorar a interação dos estudantes com a nutricionista. Aqui você pode acessar várias funcionalidades do sistema, como consulta ao cardápio e envio de mensagens.",
+        },
+        {
+          title: "Michael Instrumentos",
+          image: "../images/michael-banner.png",
+          video: "../videos/michael-demo.mp4",
+          description:
+            "Michael Instrumentos é um sistema para gerenciar instrumentos musicais, proporcionando controle de inventário e vendas.",
+        },
+        {
+          title: "Orçamento Amigo",
+          image: "../images/Orcamento-banner.png",
+          video: "../videos/michael-demo.mp4",
+          description:
+            "Orçamento Amigo é um sistema para gerenciar suas compras com maior facilidade",
+        },
+        {
+          title: "SpookTunes",
+          image: "../images/spook-banner.png",
+          video: "../videos/michael-demo.mp4",
+          description:
+            "SpookTunes é um sistema de música que foi criado com um intuito de ser tipo um spotify",
+        },
+        // Adicione outros projetos conforme necessário
+      ];
+
+      // Exibir o modal ao clicar no botão "Ver Mais"
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          const project = projectDetails[index];
+          modalBody.innerHTML = `
+      <h2>${project.title}</h2>
+      <img src="${project.image}" alt="${project.title}" class="modal-image" />
+      <video src="${project.video}" controls class="modal-video"></video>
+      <p>${project.description}</p>
+    `;
+          modal.classList.remove("hidden");
+        });
+      });
+
+      // Fechar modal
+      closeBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+
+      // Fechar modal ao clicar fora
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    </script>
 
     <!-- Meus Projetos, Botão mostrando projetos https://uiverse.io/Praashoo7/chilly-dragon-63 -->
 
