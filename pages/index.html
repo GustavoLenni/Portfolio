@@ -13,6 +13,10 @@
     <title>Guh</title>
   </head>
   <body>
+    <div class="background">
+      <canvas id="backgroundCanvas"></canvas>
+      <script src="../js/java.js"></script>
+    </div>
     <!-- Inicio logo  -->
     <header class="cabecalho">
       <div class="logo">
@@ -22,9 +26,13 @@
 
     <!-- Texto incio -->
     <main class="inicio">
+      <div class="img-logo">
+        <img width="200px" src="../images/fin.png" alt="" />
+      </div>
       <section class="textos">
         <h2 class="text-inicio">
-          <span class="highlight">BEM VINDO!</span> SOU GUSTAVO
+          <span class="highlight">BEM VINDO!</span> SOU<br />
+          GUSTAVO
         </h2>
         <p class="sub">
           Aqui você pode explorar meus projetos, habilidades e trajetória na
@@ -33,37 +41,44 @@
       </section>
     </main>
 
-    <!-- Sobre Mim  -->
-    <section class="sobre">
-      <section class="textos">
-        <h2 class="sobre-titulo">Eae pessoal</h2>
-        <span class="titulo">Sobre Mim</span>
-        <p class="sub">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut commodo
-          velit, ut rutrum arcu. Suspendisse gravida quam eget scelerisque
-          laoreet. Nullam imperdiet maximus placerat. Aliquam faucibus suscipit
-          euismod.
-        </p>
-      </section>
-
-      <section class="fin">
-        <section class="carrossel">
-          <div class="imagens">
-            <img class="img-fin" src="../images/fin-1.png" alt="" />
-            <img class="img-fin" src="../images/fin-2.png" alt="" />
-            <img class="img-fin" src="../images/fin-3.png" alt="" />
-          </div>
-          <div class="fundo">
-            <img class="img-fundo" src="../images/fundo.png" alt="" />
-          </div>
+    <div class="sobre-wrapper">
+      <!-- Sobre Mim -->
+      <section class="sobre">
+        <section class="textos">
+          <h2 class="sobre-titulo">Eae pessoal</h2>
+          <span class="titulo">Sobre Mim</span>
+          <p class="sub">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut
+            commodo velit, ut rutrum arcu. Suspendisse gravida quam eget
+            scelerisque laoreet. Nullam imperdiet maximus placerat. Aliquam
+            faucibus suscipit euismod.
+          </p>
+        </section>
+        <section class="fin">
+          <section class="carrossel">
+            <div class="imagens">
+              <img class="img-fin" src="../images/1.png" alt="" />
+              <img class="img-fin" src="../images/2.png" alt="" />
+              <img class="img-fin" src="../images/3.png" alt="" />
+              <img class="img-fin" src="../images/4.png" alt="" />
+              <img class="img-fin" src="../images/5.png" alt="" />
+              <img class="img-fin" src="../images/6.png" alt="" />
+              <img class="img-fin" src="../images/7.png" alt="" />
+              <img class="img-fin" src="../images/8.png" alt="" />
+              <img class="img-fin" src="../images/9.png" alt="" />
+              <img class="img-fin" src="../images/10.png" alt="" />
+            </div>
+          </section>
         </section>
       </section>
-    </section>
-
-    <div class="text-proj">
-      <span class="titulo">Meus Projetos</span>
     </div>
 
+    <section class="cont-proj">
+      <div class="text-proj">
+        <span class="titulo">Meus Projetos</span>
+      </div>
+    </section>
+    
     <section class="projetos">
       <section class="cards">
         <!-- Primeira fileira -->
@@ -170,7 +185,6 @@
         </div>
       </section>
     </section>
-
 
     <!-- Meus Projetos, Botão mostrando projetos https://uiverse.io/Praashoo7/chilly-dragon-63 -->
 
