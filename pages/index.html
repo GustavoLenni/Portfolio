@@ -9,13 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Guh</title>
   </head>
   <body>
     <div class="background">
       <canvas id="backgroundCanvas"></canvas>
-      <script src="../js/java.js"></script>
+      <script src="../js/background.js"></script>
     </div>
     <!-- Inicio logo  -->
     <header class="cabecalho">
@@ -27,17 +36,34 @@
     <!-- Texto incio -->
     <main class="inicio">
       <div class="img-logo">
-        <img width="200px" src="../images/fin.png" alt="" />
+        <img width="200px" src="../images/fin.png" alt="Logo" />
       </div>
       <section class="textos">
         <h2 class="text-inicio">
-          <span class="highlight">BEM VINDO!</span> SOU<br />
-          GUSTAVO
+          <span class="highlight">BEM VINDO!</span> SOU
+          <span class="typedText"></span>
         </h2>
         <p class="sub">
           Aqui você pode explorar meus projetos, habilidades e trajetória na
           programação!
         </p>
+        <div class="social_icons">
+          <a href="https://www.instagram.com/o.guhx/" target="_blank" class="icon" aria-label="Instagram">
+            <i class="uil uil-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/gustavo-santos-107557307/" target="_blank" class="icon" aria-label="LinkedIn">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a href="https://wa.me/5511991039685" target="_blank" class="icon" aria-label="Figma">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com/Guhxs1010" target="_blank" class="icon" aria-label="GitHub">
+            <i class="uil uil-github-alt"></i>
+          </a>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="../js/letra.js"></script>
       </section>
     </main>
 
@@ -144,11 +170,11 @@
               <p>Gustavo Lenni e Felipe Luz</p>
             </div>
           </div>
-          <div class="button">
-            <button class="btn">
-              <i class="animation"></i>Ver Mais<i class="animation"></i>
-            </button>
-          </div>
+          
+            <div class="button">
+              <button class="btn">Ver Mais</button>
+            </div>
+          
         </div>
         <!-- Segunda fileira -->
         <div class="card" data-index="3">
@@ -167,9 +193,7 @@
             </div>
           </div>
           <div class="button">
-            <button class="btn">
-              <i class="animation"></i>Ver Mais<i class="animation"></i>
-            </button>
+            <button class="btn">Ver Mais</button>
           </div>
         </div>
 
@@ -190,82 +214,29 @@
       </div>
     </div>
 
-    <script>
-      // Selecionar os botões e o modal
-      const buttons = document.querySelectorAll(".btn");
-      const modal = document.getElementById("modal");
-      const modalBody = document.getElementById("modal-body");
-      const closeBtn = document.querySelector(".close-btn");
+    <section class="email">
+      <!-- gustavosantostb10@gmail.com -->
+    </section>
 
-      // Dados dos projetos (você pode adicionar mais aqui)
-      const projectDetails = [
-        {
-          title: "Refeitório",
-          image: "../images/refeitorio-banner.png",
-          video: "../videos/refeitorio-demo.mp4",
-          description:
-            "O projeto Refeitório ajuda a melhorar a interação dos estudantes com a nutricionista. Aqui você pode acessar várias funcionalidades do sistema, como consulta ao cardápio e envio de mensagens.",
-        },
-        {
-          title: "Michael Instrumentos",
-          image: "../images/michael-banner.png",
-          video: "../videos/michael-demo.mp4",
-          description:
-            "Michael Instrumentos é um sistema para gerenciar instrumentos musicais, proporcionando controle de inventário e vendas.",
-        },
-        {
-          title: "Orçamento Amigo",
-          image: "../images/Orcamento-banner.png",
-          video: "../videos/michael-demo.mp4",
-          description:
-            "Orçamento Amigo é um sistema para gerenciar suas compras com maior facilidade",
-        },
-        {
-          title: "SpookTunes",
-          image: "../images/spook-banner.png",
-          video: "../videos/michael-demo.mp4",
-          description:
-            "SpookTunes é um sistema de música que foi criado com um intuito de ser tipo um spotify",
-        },
-        // Adicione outros projetos conforme necessário
-      ];
+    <footer>
+      <div class="text">
+         sobre 
+      </div>
+      <div class="logo">
 
-      // Exibir o modal ao clicar no botão "Ver Mais"
-      buttons.forEach((button, index) => {
-        button.addEventListener("click", () => {
-          const project = projectDetails[index];
-          modalBody.innerHTML = `
-      <h2>${project.title}</h2>
-      <img src="${project.image}" alt="${project.title}" class="modal-image" />
-      <video src="${project.video}" controls class="modal-video"></video>
-      <p>${project.description}</p>
-    `;
-          modal.classList.remove("hidden");
-        });
-      });
-
-      // Fechar modal
-      closeBtn.addEventListener("click", () => {
-        modal.classList.add("hidden");
-      });
-
-      // Fechar modal ao clicar fora
-      window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-          modal.classList.add("hidden");
-        }
-      });
-    </script>
+      </div>
+    </footer>
 
     <!-- Meus Projetos, Botão mostrando projetos https://uiverse.io/Praashoo7/chilly-dragon-63 -->
 
     <!-- Adicionar Botão de contato ao lado da Logo  https://uiverse.io/satyamchaudharydev/rude-wolverine-24-->
 
-    <!-- Botão das Feramentas que eu utilizo https://uiverse.io/0xnihilism/pretty-fireant-33  -->
-
     <!-- Botão de ver Projetos do Github no caso ele ver meu usuario do git https://uiverse.io/Creatlydev/rare-treefrog-56  -->
 
     <!-- Fazer Footer bonitin  -->
-    <script src="../js/script.js"></script>
+
+    <script src="../js/letra.js"></script>
+    <script src="../js/carrossel.js"></script>
+    <script src="../js/modal.js"></script>
   </body>
 </html>

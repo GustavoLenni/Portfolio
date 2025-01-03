@@ -43,22 +43,28 @@ body {
 
 .inicio {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   margin-top: 5%;
 }
-.text-proj{
-  display: flex;
-  justify-content: center;
-}
+
 .text-inicio {
   font-family: var(--font-secondary);
   font-size: 49px;
   font-weight: 500;
   color: var(--text-color);
-  text-align: left;
 }
+
+.sub {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+.text-proj {
+  display: flex;
+  justify-content: center;
+}
+
 .sobre-wrapper {
   display: flex;
   justify-content: center;
@@ -77,10 +83,10 @@ body {
   border-radius: 30px;
 }
 .textos {
+  position: relative; /* Define o contêiner como referência */
   max-width: 50%;
   text-align: left; /* Centraliza o texto dentro do .textos */
 }
-
 
 .sobre-titulo {
   font-family: var(--font-primary);
@@ -136,11 +142,6 @@ body {
   opacity: 1;
 }
 
-
-
-
-
-
 .inicio .sub {
   font-family: var(--font-primary);
   font-size: 15px;
@@ -150,13 +151,17 @@ body {
   text-align: left;
   line-height: 1.5; /* Melhora o espaçamento entre linhas */
 }
-.img-logo{
+.img-logo {
   margin-left: 10%;
 }
 /*Texto degrade*/
 .highlight {
   font-weight: 700;
-  background-image: linear-gradient(-225deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background-image: linear-gradient(
+    -225deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -195,6 +200,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 .cards {
@@ -203,55 +209,44 @@ body {
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
+  transition: grid-template-columns 0.3s ease;
 }
 
 .card {
-  background-color: #1a1a1a;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Efeito glassmorphism */
+  backdrop-filter: blur(10px); /* Efeito de desfoque */
+  border-radius: 10px;
   padding: 20px;
   width: 240px;
-  height: 250px;
+  height: 300px; /* Ajustado para melhor acomodar as imagens */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efeito de elevação */
 }
 
 .switch {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 80px;
-  top: -5px;
-}
-.switch-img{
-  width: 220px;
-  height: 100px;
-  border-radius: 8px;
-} 
-input[type="checkbox"] {
-  display: none;
+  height: 0;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  width: 100%;
 }
 
-.slider {
-  position: relative;
-  width: 20px;
-  height: 80px;
-  background-color: #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.slider:before {
-  content: '';
+.switch-img {
   position: absolute;
-  top: 5px;
-  left: -5px;
-  width: 30px;
-  height: 10px;
-  background-color: white;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  border-radius: 8px;
 }
 
 .card-info {
@@ -259,37 +254,38 @@ input[type="checkbox"] {
   align-items: center;
   gap: 10px;
 }
-.button{
+
+.button {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
-/* From Uiverse.io by Satoshikamotona */ 
+
 .btn {
   outline: 0;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  background:var(--new-color);
-  min-width: 100px;
-  height: 5px;
+  justify-content: center;
+  background: var(--new-color);
+  min-width: 120px;
+  height: 40px;
   border: 0;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  padding: 16px 20px;
+  padding: 10px 20px;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  overflow: hidden;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn:hover {
   opacity: 0.95;
-  background-color: transparent;
 }
 
 .btn .animation {
@@ -299,25 +295,18 @@ input[type="checkbox"] {
 
 @keyframes ripple {
   0% {
-    box-shadow:
-      0 0 0 0 rgba(255, 255, 255, 0.1),
-      0 0 0 20px rgba(255, 255, 255, 0.1),
-      0 0 0 40px rgba(255, 255, 255, 0.1),
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
       0 0 0 60px rgba(255, 255, 255, 0.1);
   }
 
   100% {
-    box-shadow:
-      0 0 0 20px rgba(255, 255, 255, 0.1),
-      0 0 0 40px rgba(255, 255, 255, 0.1),
-      0 0 0 60px rgba(255, 255, 255, 0.1),
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
       0 0 0 80px rgba(255, 255, 255, 0);
   }
 }
-.btn i{
-  font-family: var(--font-primary);
-  font-weight: bold;
-}
+
 .avatar {
   width: 36px;
   height: 36px;
@@ -340,11 +329,29 @@ input[type="checkbox"] {
   font-size: 12px;
   opacity: 0.7;
 }
-.text-proj .titulo{
+
+.text-proj .titulo {
   font-family: var(--font-secondary);
   color: var(--primary-color);
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .text-proj .titulo {
+    font-size: 30px;
+  }
 }
 canvas#backgroundCanvas {
   position: fixed;
@@ -356,7 +363,6 @@ canvas#backgroundCanvas {
   pointer-events: none;
   /* Impede que o canvas bloqueie interações */
 }
-
 
 .background {
   position: absolute;
@@ -421,6 +427,82 @@ canvas#backgroundCanvas {
   margin: 10px 0;
   font-size: 14px;
   line-height: 1.5;
+}
+.btn-github {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 0.5rem;
+  border: none;
+
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 100px;
+  font-weight: 800;
+  place-content: center;
+
+  padding: 0.75rem 1rem;
+  font-size: 0.825rem;
+  line-height: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #fff;
+
+  text-decoration: none; /* Remove qualquer sublinhado residual */
+}
+
+.btn-github svg,
+.btn-github span {
+  display: inline-block; /* Garante que o espaçamento seja uniforme */
+  vertical-align: middle; /* Remove desalinhamento com o texto */
+}
+
+.btn-github:hover {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(128, 0, 128, 0.08);
+  color: #800080;
+  transform: translate(0, -0.25rem);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.typedText {
+  text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+  color: var(--text-color);
+  font-family: var(--font-secondary);
+}
+.social_icons {
+  position: absolute;
+  bottom: -60px; /* Ajuste para ficar logo abaixo do subtítulo */
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none; /* Remove o sublinhado do link */
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  background-color: var(--new-color);
+}
+
+/* Estilo dos ícones */
+.icon i {
+  font-size: 18px;
+  pointer-events: none; /* Permite clicar no link, não no ícone */
 }
 
 /* Responsividade */
