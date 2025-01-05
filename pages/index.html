@@ -27,14 +27,23 @@
       <script src="../js/background.js"></script>
     </div>
     <!-- Inicio logo  -->
-    <header class="cabecalho">
-      <div class="logo">
-        <h1 class="logo-text">Guh</h1>
-      </div>
+    <header class="cabecalho" >
+      <script src="../js/animation.js"></script>
+      <nav class="nav">
+        <h1 class="logo-text">GUH</h1>
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about">Sobre Mim</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contact">Contato</span></a></li>
+        </ul>
+      </nav>
     </header>
+    
+    
 
     <!-- Texto incio -->
-    <main class="inicio">
+    <main class="inicio" id="inicio">
       <div class="img-logo">
         <img width="200px" src="../images/fin.png" alt="Logo" />
       </div>
@@ -48,26 +57,46 @@
           programação!
         </p>
         <div class="social_icons">
-          <a href="https://www.instagram.com/o.guhx/" target="_blank" class="icon" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/o.guhx/"
+            target="_blank"
+            class="icon"
+            aria-label="Instagram"
+          >
             <i class="uil uil-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/gustavo-santos-107557307/" target="_blank" class="icon" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/gustavo-santos-107557307/"
+            target="_blank"
+            class="icon"
+            aria-label="LinkedIn"
+          >
             <i class="uil uil-linkedin-alt"></i>
           </a>
-          <a href="https://wa.me/5511991039685" target="_blank" class="icon" aria-label="Figma">
+          <a
+            href="https://wa.me/5511991039685"
+            target="_blank"
+            class="icon"
+            aria-label="Figma"
+          >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a href="https://github.com/Guhxs1010" target="_blank" class="icon" aria-label="GitHub">
+          <a
+            href="https://github.com/Guhxs1010"
+            target="_blank"
+            class="icon"
+            aria-label="GitHub"
+          >
             <i class="uil uil-github-alt"></i>
           </a>
         </div>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="../js/letra.js"></script>
       </section>
     </main>
 
-    <div class="sobre-wrapper">
+    <div class="sobre-wrapper" id="about">
       <!-- Sobre Mim -->
       <section class="sobre">
         <section class="textos">
@@ -99,7 +128,7 @@
       </section>
     </div>
 
-    <section class="cont-proj">
+    <section class="cont-proj" id="projects">
       <div class="text-proj">
         <span class="titulo">Meus Projetos</span>
       </div>
@@ -170,11 +199,10 @@
               <p>Gustavo Lenni e Felipe Luz</p>
             </div>
           </div>
-          
-            <div class="button">
-              <button class="btn">Ver Mais</button>
-            </div>
-          
+
+          <div class="button">
+            <button class="btn">Ver Mais</button>
+          </div>
         </div>
         <!-- Segunda fileira -->
         <div class="card" data-index="3">
@@ -214,16 +242,82 @@
       </div>
     </div>
 
-    <section class="email">
-      <!-- gustavosantostb10@gmail.com -->
-    </section>
+    <div class="contact-container" id="contact">
+      <section class="email">
+        <h2>Entre em Contato</h2>
+        <form action="mailto:gustavosantostb10@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    
+      <section class="contact-card">
+        <h2>Contato</h2>
+        <p><strong>Email:</strong> gustavosantostb10@gmail.com</p>
+        <p><strong>Telefone:</strong> (55) 1199103-9685</p>
+        <p>Entre em contato diretamente pelo email ou telefone.</p>
+      </section>
+    </div>
+    
 
     <footer>
-      <div class="text">
-         
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <h3>Projetos Recentes</h3>
+          <ul class="footer-links">
+            <li><a href="#projeto1">Projeto 1</a></li>
+            <li><a href="#projeto2">Projeto 2</a></li>
+            <li><a href="#projeto3">Projeto 3</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:seu@email.com">Email</a></li>
+            <li><a href="tel:+123456789">Telefone</a></li>
+            <li><a href="#linkedin">LinkedIn</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <div class="logo-container">
+            <h1 class="logo-text">GUH</h1>
+            <div class="social-links">
+              <a href="#" aria-label="Github">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="logo">
-
+    
+      <div class="footer-bottom">
+        <p>&copy; 2025 GUH. Todos os direitos reservados.</p>
       </div>
     </footer>
 
