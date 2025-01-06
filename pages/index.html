@@ -246,24 +246,52 @@
       <section class="email">
         <h2>Entre em Contato</h2>
         <form action="mailto:gustavosantostb10@gmail.com" method="post" enctype="text/plain">
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+          <div class="input-group" style="--i: 1">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Nome</label>
+          </div>
           
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          <div class="input-group" style="--i: 2">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email</label>
+          </div>
           
-          <label for="message">Mensagem:</label>
-          <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+          <div class="input-group" style="--i: 3">
+            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Mensagem</label>
+          </div>
           
-          <button type="submit">Enviar</button>
+          <button type="submit"><span>Enviar Mensagem</span></button>
         </form>
       </section>
-    
+      
       <section class="contact-card">
-        <h2>Contato</h2>
-        <p><strong>Email:</strong> gustavosantostb10@gmail.com</p>
-        <p><strong>Telefone:</strong> (55) 1199103-9685</p>
-        <p>Entre em contato diretamente pelo email ou telefone.</p>
+        <h2>Informações de Contato</h2>
+        <p style="--i: 1">
+          <div class="contact-info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </div>
+          <span><strong>Email:</strong> gustavosantostb10@gmail.com</span>
+        </p>
+        <p style="--i: 2">
+          <div class="contact-info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <span><strong>Telefone:</strong> (55) 1199103-9685</span>
+        </p>
+        <p style="--i: 3">
+          <div class="contact-info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <span>Disponível para contato em horário comercial</span>
+        </p>
       </section>
     </div>
     
@@ -292,9 +320,9 @@
         <div class="footer-section">
           <h3>Contato</h3>
           <ul class="footer-links">
-            <li><a href="mailto:seu@email.com">Email</a></li>
-            <li><a href="tel:+123456789">Telefone</a></li>
-            <li><a href="#linkedin">LinkedIn</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="https://wa.me/5511991039685">Telefone</a></li>
+            <li><a href="https://www.linkedin.com/in/gustavo-santos-107557307/">LinkedIn</a></li>
           </ul>
         </div>
     
@@ -302,13 +330,13 @@
           <div class="logo-container">
             <h1 class="logo-text">GUH</h1>
             <div class="social-links">
-              <a href="#" aria-label="Github">
+              <a href="https://github.com/Guhxs1010" aria-label="Github">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/gustavo-santos-107557307/" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/o.guhx/" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>
