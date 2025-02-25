@@ -9,20 +9,33 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    
-    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/cabecalho.css" /> 
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/projetos.css" />
+    <link rel="stylesheet" href="./css/contato.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/keyframes.css" /> 
+    <link rel="stylesheet" href="./css/responsivo.css" />
+    <link rel="icon" href="images/logo-g.png" type="image/png">
     <title>Guh</title>
+    <!-- colocar icon com minha logo -->
   </head>
   <body>
+    <!-- Background -->
     <div class="background">
       <canvas id="backgroundCanvas"></canvas>
       <script src="./js/background.js"></script>
@@ -37,8 +50,8 @@
         
         <ul class="nav-list">
           <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#projects">Projetos</a></li> 
           <li><a href="#about">Sobre Mim</a></li>
-          <li><a href="#projects">Projetos</a></li>
           <li><a href="#contact">Contato</span></a></li>
         </ul>
       </nav>
@@ -47,7 +60,7 @@
     
 
     <!-- Texto incio -->
-    <main class="inicio" id="inicio">
+    <main class="inicio">
       <div class="img-logo">
         <img width="200px" src="./images/fin.png" alt="Logo" />
       </div>
@@ -100,38 +113,35 @@
       </section>
     </main>
 
-    <div class="sobre-wrapper" id="about">
-      <!-- Sobre Mim -->
-      <section class="sobre">
-        <section class="textos">
-          <h2 class="sobre-titulo">Eae pessoal</h2>
-          <span class="titulo">Sobre Mim</span>
-          <p class="sub">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut
-            commodo velit, ut rutrum arcu. Suspendisse gravida quam eget
-            scelerisque laoreet. Nullam imperdiet maximus placerat. Aliquam
-            faucibus suscipit euismod.
-          </p>
-        </section>
-        <section class="fin">
-          <section class="carrossel">
-            <div class="imagens">
-              <img class="img-fin" src="./images/1.png" alt="" />
-              <img class="img-fin" src="./images/2.png" alt="" />
-              <img class="img-fin" src="./images/3.png" alt="" />
-              <img class="img-fin" src="./images/4.png" alt="" />
-              <img class="img-fin" src="./images/5.png" alt="" />
-              <img class="img-fin" src="./images/6.png" alt="" />
-              <img class="img-fin" src="./images/7.png" alt="" />
-              <img class="img-fin" src="./images/8.png" alt="" />
-              <img class="img-fin" src="./images/9.png" alt="" />
-              <img class="img-fin" src="./images/10.png" alt="" />
-            </div>
-          </section>
-        </section>
-      </section>
-    </div>
+<script src="js/animation.js"></script>
+    <!-- Adicionar parte de Tecnologias que utilizo e tals em cima e experiência,colocar onde cursei
+     e entre outros  -->
+     <section class="tech-section" id="inicio">
+      <div class="tech-container">
+          <h2 class="section-title fade-in">Tecnologias e Experiências</h2>
+          <p class="tech-subtitle fade-in delay-1">Habilidades técnicas e ferramentas que utilizo</p>
+      
+          <div class="tech-content">
+              <div class="tech-text fade-in delay-1">
+                  <p>Utilizo ferramentas essenciais para o desenvolvimento moderno, como <strong>Visual Studio Code</strong> para codificação eficiente, <strong>Figma</strong> para design e prototipação e <strong>GitHub</strong> para controle de versão e colaboração.</p>
+                  
+                  <p>Minha stack inclui <strong>HTML, CSS, JavaScript e TypeScript</strong> no frontend, além de <strong>React.js</strong> para interfaces dinâmicas. No backend, utilizo <strong>Node.js</strong> para APIs escaláveis e <strong>Supabase</strong> para banco de dados e autenticação.</p>
+              </div>
+              
+              <div class="tech-visual slide-in delay-2">
+                  <div class="tech-image">
+                      <img src="images/codigo.png" alt="Tecnologias utilizadas">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    
 
+
+
+<!-- Projetos -->
     <section class="cont-proj" id="projects">
       <div class="text-proj">
         <span class="titulo">Meus Projetos</span>
@@ -246,6 +256,57 @@
       </div>
     </div>
 
+
+<!-- Sobre Mim -->
+        <div class="sobre-wrapper" id="about">
+          <div class="fundo">
+            <img src="images/fundo3.png" alt="">
+          </div>
+      
+          <section class="sobre">
+            <div class="sobre-cont">
+              <section class="textos">
+                <h2 class="sobre-titulo">Eae pessoal</h2>
+                <div class="cont-titulo">
+                  <span class="titulo">Sobre Mim</span>
+                </div>
+                <p class="sub">
+                  A tecnologia sempre despertou minha curiosidade, e na programação encontrei meu verdadeiro desafio. Transformar ideias em soluções me motiva a evoluir constantemente.
+
+            Sou desenvolvedor Full Stack com conhecimento em HTML, CSS, JavaScript, Python, Node.js e familiaridade com PHP. Utilizo Git e GitHub para versionamento e estou sempre aprimorando minhas habilidades.
+            
+            Busco minha primeira experiência profissional par crescer na área e contribuir com projetos inovadores.     
+                </p>
+              </section>
+            </div>
+        
+            <section class="fin">
+              <div class="eu">
+                <img src="images/foto3.png" alt="">
+              </div>
+              <section class="carrossel">
+                <div class="imagens">
+                  <img class="img-fin" src="./images/1.png" alt="" />
+                  <img class="img-fin" src="./images/2.png" alt="" />
+                  <img class="img-fin" src="./images/3.png" alt="" />
+                  <img class="img-fin" src="./images/4.png" alt="" />
+                  <img class="img-fin" src="./images/5.png" alt="" />
+                  <img class="img-fin" src="./images/6.png" alt="" />
+                  <img class="img-fin" src="./images/7.png" alt="" />
+                  <img class="img-fin" src="./images/8.png" alt="" />
+                  <img class="img-fin" src="./images/9.png" alt="" />
+                  <img class="img-fin" src="./images/10.png" alt="" />
+                </div>
+              </section>
+            </section>
+
+          
+          </section>
+        </div>
+        
+        
+        
+<!-- Contato -->
     <div class="contact-container" id="contact">
       <section class="email">
         <h2>Entre em Contato</h2>
@@ -299,7 +360,7 @@
       </section>
     </div>
     
-
+<!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-section">

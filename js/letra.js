@@ -1,6 +1,6 @@
 /* ----- TYPING EFFECT ----- */
 let typingEffect = new Typed(".typedText", {
-    strings: ["Gustavo Lenni","Desenvolvedor","Designer" ],
+    strings: ["Gustavo Lenni","Programador","Desenvolvedor" ],
     loop: true,
     typeSpeed: 100,
     backSpeed: 80,

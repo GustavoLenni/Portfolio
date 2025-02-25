@@ -1,0 +1,226 @@
+/* Projetos */
+.projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    transition: grid-template-columns 0.3s ease;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1); /* Efeito glassmorphism */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    border-radius: 10px;
+    padding: 20px;
+    width: 240px;
+    height: 300px; /* Ajustado para melhor acomodar as imagens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Efeito de elevação */
+  }
+  
+  .switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    width: 100%;
+  }
+  
+  .switch-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 8px;
+  }
+  
+  .card-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--new-color);
+    min-width: 120px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn:hover {
+    opacity: 0.95;
+  }
+  
+  .btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+  }
+  
+  .info-text {
+    color: white;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .info-text h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .info-text p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  
+  .text-proj .titulo {
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Menor largura */
+    max-height: 80%; /* Limita a altura para caber na tela */
+    overflow-y: auto; /* Habilita rolagem vertical */
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .modal-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-video {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
+  
+  .modal-content p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .btn-github {
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 0.5rem;
+    border: none;
+  
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+    place-content: center;
+  
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+  
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
+  
+    text-decoration: none; /* Remove qualquer sublinhado residual */
+  }
+  
+  .btn-github svg,
+  .btn-github span {
+    display: inline-block; /* Garante que o espaçamento seja uniforme */
+    vertical-align: middle; /* Remove desalinhamento com o texto */
+  }
+  
+  .btn-github:hover {
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(128, 0, 128, 0.08);
+    color: #800080;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
