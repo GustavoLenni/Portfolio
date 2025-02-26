@@ -142,120 +142,152 @@
 
 
 <!-- Projetos -->
-    <section class="cont-proj" id="projects">
-      <div class="text-proj">
-        <span class="titulo">Meus Projetos</span>
-      </div>
-    </section>
+<section class="cont-proj" id="projects">
+  <div class="text-proj">
+    <span class="titulo">Meus Projetos</span>
+  </div>
+</section>
 
-    <section class="projetos">
-      <section class="cards">
-        <!-- Primeira fileira -->
-        <div class="card" data-index="0">
-          <div class="switch">
-            <img
-              src="./images/refeitorio-banner.png"
-              alt="Switch"
-              class="switch-img"
-            />
-          </div>
-          <div class="card-info">
-            <img
-              src="./images/refeitorio-logo.png"
-              alt="Avatar"
-              class="avatar"
-            />
-            <div class="info-text">
+<section class="projetos">
+  <!-- Botões de navegação do carrossel -->
+  <div class="carousel-navigation">
+    <button class="carousel-btn prev-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="carousel-btn next-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Container do carrossel -->
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Projeto 1 -->
+      <div class="project-card" data-index="0">
+        <div class="project-image">
+          <img src="./images/refeitorio-banner.png" alt="Projeto Refeitório" />
+        </div>
+        <div class="project-info">
+          <div class="project-header">
+            <img src="./images/refeitorio-logo.png" alt="Logo Refeitório" class="project-logo" />
+            <div class="project-title">
               <h3>Refeitório</h3>
               <p>Grupo Senai</p>
             </div>
           </div>
-          <div class="button">
-            <button class="btn">Ver Mais</button>
+          <div class="project-description">
+            <p>O projeto Refeitório ajuda a melhorar a interação dos estudantes com a nutricionista, permitindo consulta ao cardápio e envio de mensagens.</p>
+          </div>
+          <div class="project-actions">
+            <a href="https://seuprojetorefeitorio.com" class="btn btn-view" target="_blank">Visualizar</a>
+            <a href="https://github.com/Guhxs1010/refeitorio" class="btn btn-repo" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.839 21.489C9.339 21.581 9.521 21.278 9.521 21.016C9.521 20.775 9.512 20.041 9.508 19.223C6.726 19.858 6.139 17.92 6.139 17.92C5.685 16.818 5.028 16.517 5.028 16.517C4.132 15.917 5.097 15.929 5.097 15.929C6.092 15.998 6.626 16.932 6.626 16.932C7.521 18.425 9.007 17.968 9.54 17.713C9.632 17.082 9.894 16.624 10.184 16.379C7.958 16.129 5.619 15.295 5.619 11.533C5.619 10.42 6.02 9.506 6.646 8.786C6.544 8.535 6.19 7.598 6.746 6.204C6.746 6.204 7.586 5.939 9.496 7.252C10.3 7.03 11.154 6.92 12 6.916C12.846 6.92 13.701 7.03 14.505 7.252C16.414 5.939 17.253 6.204 17.253 6.204C17.81 7.598 17.456 8.535 17.354 8.786C17.98 9.506 18.379 10.42 18.379 11.533C18.379 15.304 16.037 16.126 13.804 16.371C14.161 16.675 14.484 17.278 14.484 18.198C14.484 19.518 14.471 20.683 14.471 21.016C14.471 21.28 14.651 21.586 15.159 21.487C19.131 20.162 22 16.416 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor"/>
+              </svg>
+              Repositório
+            </a>
           </div>
         </div>
-        <div class="card" data-index="1">
-          <div class="switch">
-            <img
-              src="./images/michael-banner.png"
-              alt="Switch"
-              class="switch-img"
-            />
-          </div>
-          <div class="card-info">
-            <img src="./images/michael-logo.png" alt="Avatar" class="avatar" />
-            <div class="info-text">
-              <h3>Michael Instrumentos</h3>
-              <p>Grupo Senai</p>
-            </div>
-          </div>
-          <div class="button">
-            <button class="btn">Ver Mais</button>
-          </div>
-        </div>
+      </div>
 
-        <div class="card" data-index="2">
-          <div class="switch">
-            <img
-              src="./images/Orcamento-banner.png"
-              alt="Switch"
-              class="switch-img"
-            />
-          </div>
-          <div class="card-info">
-            <img
-              src="./images/Orcamento-logo.png"
-              alt="Avatar"
-              class="avatar"
-            />
-            <div class="info-text">
+      <!-- Projeto 2 -->
+      <div class="project-card" data-index="2">
+        <div class="project-image">
+          <img src="./images/Orcamento-banner.png" alt="Projeto Orçamento Amigo" />
+        </div>
+        <div class="project-info">
+          <div class="project-header">
+            <img src="./images/Orcamento-logo.png" alt="Logo Orçamento" class="project-logo" />
+            <div class="project-title">
               <h3>Orçamento Amigo</h3>
               <p>Gustavo Lenni e Felipe Luz</p>
             </div>
           </div>
-
-          <div class="button">
-            <button class="btn">Ver Mais</button>
+          <div class="project-description">
+            <p>Orçamento Amigo é um sistema para gerenciar suas compras com maior facilidade, oferecendo controle financeiro e organização de gastos.</p>
+          </div>
+          <div class="project-actions">
+            <a href="https://orcamento-amigo.com" class="btn btn-view" target="_blank">Visualizar</a>
+            <a href="https://github.com/Guhxs1010/orcamento-amigo" class="btn btn-repo" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.839 21.489C9.339 21.581 9.521 21.278 9.521 21.016C9.521 20.775 9.512 20.041 9.508 19.223C6.726 19.858 6.139 17.92 6.139 17.92C5.685 16.818 5.028 16.517 5.028 16.517C4.132 15.917 5.097 15.929 5.097 15.929C6.092 15.998 6.626 16.932 6.626 16.932C7.521 18.425 9.007 17.968 9.54 17.713C9.632 17.082 9.894 16.624 10.184 16.379C7.958 16.129 5.619 15.295 5.619 11.533C5.619 10.42 6.02 9.506 6.646 8.786C6.544 8.535 6.19 7.598 6.746 6.204C6.746 6.204 7.586 5.939 9.496 7.252C10.3 7.03 11.154 6.92 12 6.916C12.846 6.92 13.701 7.03 14.505 7.252C16.414 5.939 17.253 6.204 17.253 6.204C17.81 7.598 17.456 8.535 17.354 8.786C17.98 9.506 18.379 10.42 18.379 11.533C18.379 15.304 16.037 16.126 13.804 16.371C14.161 16.675 14.484 17.278 14.484 18.198C14.484 19.518 14.471 20.683 14.471 21.016C14.471 21.28 14.651 21.586 15.159 21.487C19.131 20.162 22 16.416 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor"/>
+              </svg>
+              Repositório
+            </a>
           </div>
         </div>
-        <!-- Segunda fileira -->
-        <div class="card" data-index="3">
-          <div class="switch">
-            <img
-              src="./images/spook-banner.png"
-              alt="Switch"
-              class="switch-img"
-            />
+      </div>
+
+      
+      <!-- Projeto 3 -->
+      <div class="project-card" data-index="1">
+        <div class="project-image">
+          <img src="./images/michael-banner.png" alt="Projeto Michael Instrumentos" />
+        </div>
+        <div class="project-info">
+          <div class="project-header">
+            <img src="./images/michael-logo.png" alt="Logo Michael" class="project-logo" />
+            <div class="project-title">
+              <h3>Michael Instrumentos</h3>
+              <p>Grupo Senai</p>
+            </div>
           </div>
-          <div class="card-info">
-            <img src="./images/spook-logo.png" alt="Avatar" class="avatar" />
-            <div class="info-text">
+          <div class="project-description">
+            <p>Michael Instrumentos é um sistema para gerenciar instrumentos musicais, proporcionando controle de inventário e vendas.</p>
+          </div>
+          <div class="project-actions">
+            <a href="https://michaelmusical.com" class="btn btn-view" target="_blank">Visualizar</a>
+            <a href="https://github.com/Guhxs1010/michael-instrumentos" class="btn btn-repo" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.839 21.489C9.339 21.581 9.521 21.278 9.521 21.016C9.521 20.775 9.512 20.041 9.508 19.223C6.726 19.858 6.139 17.92 6.139 17.92C5.685 16.818 5.028 16.517 5.028 16.517C4.132 15.917 5.097 15.929 5.097 15.929C6.092 15.998 6.626 16.932 6.626 16.932C7.521 18.425 9.007 17.968 9.54 17.713C9.632 17.082 9.894 16.624 10.184 16.379C7.958 16.129 5.619 15.295 5.619 11.533C5.619 10.42 6.02 9.506 6.646 8.786C6.544 8.535 6.19 7.598 6.746 6.204C6.746 6.204 7.586 5.939 9.496 7.252C10.3 7.03 11.154 6.92 12 6.916C12.846 6.92 13.701 7.03 14.505 7.252C16.414 5.939 17.253 6.204 17.253 6.204C17.81 7.598 17.456 8.535 17.354 8.786C17.98 9.506 18.379 10.42 18.379 11.533C18.379 15.304 16.037 16.126 13.804 16.371C14.161 16.675 14.484 17.278 14.484 18.198C14.484 19.518 14.471 20.683 14.471 21.016C14.471 21.28 14.651 21.586 15.159 21.487C19.131 20.162 22 16.416 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor"/>
+              </svg>
+              Repositório
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto 4 -->
+      <div class="project-card" data-index="3">
+        <div class="project-image">
+          <img src="./images/spook-banner.png" alt="Projeto Spooktunes" />
+        </div>
+        <div class="project-info">
+          <div class="project-header">
+            <img src="./images/spook-logo.png" alt="Logo Spooktunes" class="project-logo" />
+            <div class="project-title">
               <h3>Spooktunes</h3>
               <p>Gustavo Lenni e Andrey Hiago</p>
             </div>
           </div>
-          <div class="button">
-            <button class="btn">Ver Mais</button>
+          <div class="project-description">
+            <p>SpookTunes é um sistema de música inspirado no Spotify, permitindo streaming de áudio, criação de playlists e descoberta de músicas.</p>
           </div>
-        </div>
-
-        <div class="adicionar">
-          <div class="botao">
-            <!-- icone de adicionar e modal falando pra fazer contato comigo pra fazer um orçamento  -->
+          <div class="project-actions">
+            <a href="https://spooktunes.com" class="btn btn-view" target="_blank">Visualizar</a>
+            <a href="https://github.com/Guhxs1010/spooktunes" class="btn btn-repo" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.839 21.489C9.339 21.581 9.521 21.278 9.521 21.016C9.521 20.775 9.512 20.041 9.508 19.223C6.726 19.858 6.139 17.92 6.139 17.92C5.685 16.818 5.028 16.517 5.028 16.517C4.132 15.917 5.097 15.929 5.097 15.929C6.092 15.998 6.626 16.932 6.626 16.932C7.521 18.425 9.007 17.968 9.54 17.713C9.632 17.082 9.894 16.624 10.184 16.379C7.958 16.129 5.619 15.295 5.619 11.533C5.619 10.42 6.02 9.506 6.646 8.786C6.544 8.535 6.19 7.598 6.746 6.204C6.746 6.204 7.586 5.939 9.496 7.252C10.3 7.03 11.154 6.92 12 6.916C12.846 6.92 13.701 7.03 14.505 7.252C16.414 5.939 17.253 6.204 17.253 6.204C17.81 7.598 17.456 8.535 17.354 8.786C17.98 9.506 18.379 10.42 18.379 11.533C18.379 15.304 16.037 16.126 13.804 16.371C14.161 16.675 14.484 17.278 14.484 18.198C14.484 19.518 14.471 20.683 14.471 21.016C14.471 21.28 14.651 21.586 15.159 21.487C19.131 20.162 22 16.416 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor"/>
+              </svg>
+              Repositório
+            </a>
           </div>
-        </div>
-      </section>
-    </section>
-
-    <div id="modal" class="modal hidden">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <div id="modal-body">
-          <!-- Conteúdo do modal será carregado dinamicamente -->
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- Indicadores do carrossel -->
+  <div class="carousel-indicators">
+    <!-- Indicadores serão adicionados via JavaScript -->
+  </div>
+</section>
+
+  
 
 <!-- Sobre Mim -->
         <div class="sobre-wrapper" id="about">
@@ -275,7 +307,7 @@
 
             Sou desenvolvedor Full Stack com conhecimento em HTML, CSS, JavaScript, Python, Node.js e familiaridade com PHP. Utilizo Git e GitHub para versionamento e estou sempre aprimorando minhas habilidades.
             
-            Busco minha primeira experiência profissional par crescer na área e contribuir com projetos inovadores.     
+            Busco minha primeira experiência profissional para crescer na área e contribuir com projetos inovadores.     
                 </p>
               </section>
             </div>
@@ -424,6 +456,6 @@
 
     <script src="./js/letra.js"></script>
     <script src="./js/carrossel.js"></script>
-    <script src="./js/modal.js"></script>
+    <script src="./js/projetos.js"></script>
   </body>
 </html>
