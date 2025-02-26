@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
       logo: "./images/refeitorio-logo.png",
       team: "Grupo Senai",
       description: "O projeto Refeitório ajuda a melhorar a interação dos estudantes com a nutricionista. Aqui você pode acessar várias funcionalidades do sistema, como consulta ao cardápio e envio de mensagens.",
-      projectUrl: "https://seuprojetorefeitorio.com",
-      repoUrl: "https://github.com/Guhxs1010/Refeitorio"
+      projectUrl: "",
+      repoUrl: ""
     },
     {
       title: "Michael Instrumentos",
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
       logo: "./images/michael-logo.png",
       team: "Grupo Senai",
       description: "Michael Instrumentos é um sistema para gerenciar instrumentos musicais, proporcionando controle de inventário e vendas.",
-      projectUrl: "https://michaelmusical.com",
-      repoUrl: "https://github.com/Guhxs1010/MichaelInstrumentos"
+      projectUrl: "https://gustavolenni.github.io/Michael-Instrumentos-HTML/",
+      repoUrl: "https://github.com/GustavoLenni/Michael-Instrumentos-HTML"
     },
     {
       title: "Orçamento Amigo",
@@ -27,17 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
       logo: "./images/Orcamento-logo.png",
       team: "Gustavo Lenni e Felipe Luz",
       description: "Orçamento Amigo é um sistema para gerenciar suas compras com maior facilidade, oferecendo controle financeiro e organização de gastos.",
-      projectUrl: "https://orcamento-amigo.com",
-      repoUrl: "https://github.com/Guhxs1010/OrcamentoAmigo"
+      projectUrl: "https://expo.dev/accounts/guhxs/projects/OrcamentoAmigo/builds/6fd7e8bd-ef01-42e8-a5d7-2411cec024f3 ",
+      repoUrl: "https://github.com/GustavoLenni/Orcamento"
     },
     {
-      title: "SpookTunes",
-      banner: "./images/spook-banner.png",
-      logo: "./images/spook-logo.png",
-      team: "Gustavo Lenni e Andrey Hiago",
-      description: "SpookTunes é um sistema de música inspirado no Spotify, permitindo streaming de áudio, criação de playlists e descoberta de músicas.",
-      projectUrl: "https://spooktunes.com",
-      repoUrl: "https://github.com/Guhxs1010/SpookTunes"
+      title: "Fit Flow",
+      banner: "./images/Flow-banner.png",
+      logo: "./images/Flow-logo.png",
+      team: "Gustavo Lenni",
+      description: "Fit Flow é um projeto educativo inspirado no universo fitness de Xandão. Criado para fins de aprendizado, simula uma plataforma de academia com treinos, planos nutricionais e interação comunitária, sem representar uma empresa real do influenciador.",
+      projectUrl: "",
+      repoUrl: ""
     }
   ];
 
