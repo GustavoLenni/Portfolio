@@ -1,31 +1,84 @@
-/* Tab Bar Animada para Mobile e Tablet */
-@media screen and (max-width: 768px) {
-  .nav {
-    position: fixed;
-    bottom: 0;
-    top: auto;
-    left: 0;
-    transform: none;
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    padding: 15px 0;
-    background-color: rgba(10, 10, 15, 0.95);
-    box-shadow: 0 -5px 20px rgba(var(--primary-color), 0.2);
-    backdrop-filter: blur(20px);
+/* Media queries para tornar o layout responsivo */
+@media (max-width: 768px) {
+  .chat {
+    bottom: 10px;
+    right: 10px;
   }
 
+  .cont-chat {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-chat {
+    width: 25px;
+    height: 25px;
+  }
+
+  .modal-chat {
+    width: 300px;
+    height: 400px;
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .cont-chat {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn-chat {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modal-chat {
+    width: 280px;
+    height: 350px;
+    bottom: 60px;
+  }
+
+  .modal-header h3 {
+    font-size: 14px;
+  }
+}
+
+/* Tab Bar Animada para Mobile e Tablet */
+@media screen and (max-width: 320px) {
+  .nav{
+    display: none;
+  }
   .logo-text {
     display: none;
+  }
+  .sub{
+    text-align: left;
+    width: 200px;
+  }
+  .social_icons{
+    margin-left: 10%;
+  }
+  .project-description{
+    font-size: 11px;
   }
   .logo-text-2 {
     display: flex;
   }
+  .inicio .sub{
+    margin-left: 10%;
+  }
   .logo-cont {
     display: flex;
     justify-content: center;
+  }
+  .sobre .sub{
+    width: 200px;
   }
   .nav-list {
     width: 100%;
@@ -48,8 +101,58 @@
     transition: all 0.3s ease;
     position: relative;
   }
-}
+  
+  /* Estilo para ícones - apenas visíveis no mobile */
+  .nav-list a i {
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Adicionar efeito de destaque nos itens ativos (opcional) */
+  .nav-list a.active,
+  .nav-list a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Indicador de item ativo (opcional) */
+  .nav-list a.active::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+  }
 
+  /* Ajuste para o menor mobile */
+  @media screen and (max-width: 480px) {
+    .nav {
+      padding: 8px 0; /* Reduzir o padding para evitar sobrecarga */
+    }
+    
+    .nav-list a {
+      padding: 10px;
+      font-size: 10px; /* Ajustar o tamanho da fonte */
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav{
+    display: none;
+    
+  }
+  .logo-text-2{
+      display: flex;
+    }
+    .logo-cont{
+      display: flex;
+      justify-content: center;
+    }
+}
 /* Ajustes para tablets */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .nav {
@@ -130,6 +233,7 @@
   .textos {
     max-width: 90%;
     text-align: center;
+    margin-left: 0%;
   }
 
   .text-inicio {
@@ -139,6 +243,7 @@
   .sobre.sub {
     font-size: 0.9rem;
     line-height: 1.4;
+    width: 200px;
   }
 
   .social_icons {
