@@ -289,7 +289,38 @@
   </div>
 </section>
 
-  
+<script src="js/chat.js"></script>
+  <!-- Botão de chat-contato -->
+  <div class="chat">
+    <div class="cont-chat" id="openChat">
+      <div class="btn-chat"></div>
+    </div>
+  </div>
+
+  <!-- Modal de chat -->
+  <div class="modal-chat" id="chatModal">
+    <div class="modal-header">
+      <h3>Chat com Desenvolvedor</h3>
+      <button class="close-modal" id="closeChat">&times;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <!-- As mensagens serão adicionadas aqui dinamicamente -->
+      <div class="typing-indicator" id="typingIndicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem..." autocomplete="off">
+      <button class="send-btn" id="sendMessage">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
 
 <!-- Sobre Mim -->
         <div class="sobre-wrapper" id="about">
@@ -338,61 +369,6 @@
           </section>
         </div>
         
-        
-        
-<!-- Contato -->
-    <div class="contact-container" id="contact">
-      <section class="email">
-        <h2>Entre em Contato</h2>
-        <form action="mailto:gustavosantostb10@gmail.com" method="post" enctype="text/plain">
-          <div class="input-group" style="--i: 1">
-            <input type="text" id="name" name="name" placeholder=" " required>
-            <label for="name">Nome</label>
-          </div>
-          
-          <div class="input-group" style="--i: 2">
-            <input type="email" id="email" name="email" placeholder=" " required>
-            <label for="email">Email</label>
-          </div>
-          
-          <div class="input-group" style="--i: 3">
-            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
-            <label for="message">Mensagem</label>
-          </div>
-          
-          <button type="submit"><span>Enviar Mensagem</span></button>
-        </form>
-      </section>
-      
-      <section class="contact-card">
-        <h2>Informações de Contato</h2>
-        <p style="--i: 1">
-          <div class="contact-info-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-            </svg>
-          </div>
-          <span><strong>Email:</strong> gustavosantostb10@gmail.com</span>
-        </p>
-        <p style="--i: 2">
-          <div class="contact-info-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-          </div>
-          <span><strong>Telefone:</strong> (55) 1199103-9685</span>
-        </p>
-        <p style="--i: 3">
-          <div class="contact-info-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <span>Disponível para contato em horário comercial</span>
-        </p>
-      </section>
-    </div>
     
 <!-- Footer -->
     <footer>
