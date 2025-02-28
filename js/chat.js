@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const openChatBtn = document.getElementById('openChat');
+  const openChatBtns = document.querySelectorAll('#openChatDesktop, #openChatMobile'); // Seleciona ambos os botões
   const closeModalBtn = document.getElementById('closeChat');
   const chatModal = document.getElementById('chatModal');
   const chatMessages = document.getElementById('chatMessages');
@@ -96,15 +96,13 @@ const initialMessages = [
 
     
   
-  // Abrir chat ao clicar no botão
-  openChatBtn.addEventListener('click', function() {
+openChatBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
     chatModal.classList.add('active');
-    
-    // Se não há mensagens, inicia a sequência de boas-vindas
-    if (chatMessages.children.length <= 1) { // Apenas o typing indicator
-      startInitialMessages();
-    }
+    startInitialMessages(); // Chama a função para iniciar as mensagens
   });
+});
+
   
   // Fechar chat ao clicar no X
   closeModalBtn.addEventListener('click', function() {
@@ -138,7 +136,7 @@ const initialMessages = [
             addOptionButtons(msg.options);
           }
           
-          scrollToBottom();
+          
         }, 1000);
       }, cumulativeDelay);
     });
@@ -154,6 +152,10 @@ const initialMessages = [
     chatMessages.insertBefore(messageDiv, typingIndicator);
     scrollToBottom();
   }
+    // Função para rolar o chat para o final
+    function scrollToBottom() {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
   
   // Função para adicionar mensagem do usuário
   function addUserMessage(text) {
@@ -185,13 +187,13 @@ const initialMessages = [
     
     // Inserir antes do indicador de digitação
     chatMessages.insertBefore(buttonsDiv, typingIndicator);
-    scrollToBottom();
+    
   }
   
   // Função para mostrar indicador de digitação
   function showTyping() {
     typingIndicator.style.display = 'block';
-    scrollToBottom();
+    
   }
   
   // Função para esconder indicador de digitação
@@ -256,14 +258,11 @@ const initialMessages = [
         addOptionButtons(allOptions);
       }, 800);
       
-      scrollToBottom();
+     
     }, 1000);
   }
   
-  // Função para rolar o chat para o final
-  function scrollToBottom() {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
+
   
   // Evitar que o clique dentro do modal feche ele
   chatModal.addEventListener('click', function(event) {

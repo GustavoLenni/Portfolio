@@ -1,16 +1,63 @@
-/* Botão de chat */
 .chat {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
 }
-.modal-chat-mobile{
+
+/* Botão de chat para mobile */
+.mobile-chat-button {
   display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #3D56A5;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 999;
+  cursor: pointer;
 }
-.mobile-chat-button{
+
+/* Modal de chat (ajustável para mobile) */
+.modal-chat {
   display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 340px;
+  height: 480px;
+  background-color: var(--dark-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  overflow: hidden;
+  flex-direction: column;
 }
+
+.modal-chat.active {
+  display: flex;
+}
+
+/* Backdrop para quando o modal mobile estiver aberto */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-backdrop.active {
+  display: block;
+}
+
 .cont-chat {
   width: 60px;
   height: 60px;

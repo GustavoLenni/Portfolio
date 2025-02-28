@@ -5,9 +5,6 @@
   }
 
 
-  .modal-chat {
-    display: none !important; /* Força esconder o modal original mesmo que tenha classe active */
-  }
 }
 
 /* Para dispositivos com tela muito pequena em altura */
@@ -399,3 +396,60 @@
     grid-template-columns: 1fr;
   }
 }
+/* Media query para mobile (até 480px) */
+@media (max-width: 480px) {
+  /* Esconde o botão circular em telas pequenas */
+  .chat {
+    display: none;
+  }
+  
+  /* Mostra a barra de chat fixa no mobile */
+  .mobile-chat-button {
+    display: block;
+  }
+  
+  .modal-chat {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    right: auto;
+    width: 90%;
+    max-width: 340px;
+    height: 80vh;
+  }
+
+  .chat {
+    display: none;
+  }
+
+  .mobile-chat-button {
+    display: block;
+  }
+}
+@media (max-width: 375px) {
+  .modal-chat {
+    left: 40%;
+  }
+}
+@media (max-width: 375px) {
+  .modal-chat {
+    left: 31%;
+    width: 300px;
+  }
+}
+  /* Ajustes para a altura em telas muito pequenas */
+  @media (max-height: 500px) {
+    .modal-chat-mobile {
+      height: 70vh;
+    }
+    
+    .chat-messages {
+      padding: 10px;
+    }
+    
+    .message {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+  }
