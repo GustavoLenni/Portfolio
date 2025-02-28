@@ -66,6 +66,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .modal-content{
+    width: 50%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 375px) {
+  .modal-content{
+    width: 70%;
+    right: 16%;
+  }
+}
+@media (max-width: 480px) {
+  .modal-content{
+    width: 75%;
+    right: 10%;
+  }
 }
 
 /* Para dispositivos com tela muito pequena em altura */
