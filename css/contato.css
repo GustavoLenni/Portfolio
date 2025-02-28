@@ -5,7 +5,12 @@
   right: 20px;
   z-index: 999;
 }
-
+.modal-chat-mobile{
+  display: none;
+}
+.mobile-chat-button{
+  display: none;
+}
 .cont-chat {
   width: 60px;
   height: 60px;

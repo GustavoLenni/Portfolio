@@ -295,37 +295,43 @@
 </section>
 
 <script src="js/chat.js"></script>
-  <!-- Botão de chat-contato -->
-  <div class="chat">
-    <div class="cont-chat" id="openChat">
-      <div class="btn-chat"></div>
-    </div>
+<!-- Botão de chat padrão (desktop e tablet) -->
+<div class="chat">
+  <div class="cont-chat" id="openChat">
+    <div class="btn-chat"></div>
   </div>
+</div>
 
-  <!-- Modal de chat -->
-  <div class="modal-chat" id="chatModal">
-    <div class="modal-header">
-      <h3>Chat com Desenvolvedor</h3>
-      <button class="close-modal" id="closeChat">&times;</button>
-    </div>
-    <div class="chat-messages" id="chatMessages">
-      <!-- As mensagens serão adicionadas aqui dinamicamente -->
-      <div class="typing-indicator" id="typingIndicator">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Digite sua mensagem..." autocomplete="off">
-      <button class="send-btn" id="sendMessage">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+<!-- Botão de chat para mobile -->
+<div class="mobile-chat-button" id="openChatMobile">
+  <i class="fas fa-comment"></i> Falar com o Desenvolvedor
+</div>
+
+<!-- Modal de chat original -->
+<div class="modal-chat" id="chatModal">
+  <div class="modal-header">
+    <h3>Chat com Desenvolvedor</h3>
+    <button class="close-modal" id="closeChat">&times;</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <!-- As mensagens serão adicionadas aqui dinamicamente -->
+    <div class="typing-indicator" id="typingIndicator">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Digite sua mensagem..." autocomplete="off">
+    <button class="send-btn" id="sendMessage">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
 
 <!-- Sobre Mim -->
         <div class="sobre-wrapper" id="about">

@@ -1,56 +1,51 @@
-/* Media queries para tornar o layout responsivo */
-@media (max-width: 768px) {
-  .chat {
-    bottom: 10px;
-    right: 10px;
-  }
-
-  .cont-chat {
-    width: 50px;
-    height: 50px;
-  }
-
-  .btn-chat {
-    width: 25px;
-    height: 25px;
-  }
-
-  .modal-chat {
-    width: 300px;
-    height: 400px;
-    bottom: 70px;
-  }
-}
-
+/* Ajuste para esconder o botão original e mostrar o botão mobile em telas menores */
 @media (max-width: 480px) {
   .chat {
-    bottom: 10px;
-    right: 10px;
+    display: none; /* Esconde o botão circular em telas pequenas */
   }
 
-  .cont-chat {
-    width: 45px;
-    height: 45px;
-  }
-
-  .btn-chat {
-    width: 20px;
-    height: 20px;
-  }
 
   .modal-chat {
-    width: 280px;
-    height: 350px;
-    bottom: 60px;
-  }
-
-  .modal-header h3 {
-    font-size: 14px;
+    display: none !important; /* Força esconder o modal original mesmo que tenha classe active */
   }
 }
 
-/* Tab Bar Animada para Mobile e Tablet */
-@media screen and (max-width: 320px) {
+/* Para dispositivos com tela muito pequena em altura */
+@media (max-height: 500px) {
+  .modal-chat {
+    height: 70vh;
+  }
+  
+  .chat-messages {
+    padding: 10px;
+  }
+  
+  .message {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+
+/* Garantir que o modal nunca ultrapasse os limites da tela */
+@media (min-width: 320px) {
+  .mobile-chat-button {
+    width: 320px;
+  }
+}
+@media (min-width: 375px) {
+  .mobile-chat-button {
+    width: 375px;
+  }
+}
+@media (min-width: 425px) {
+  .mobile-chat-button {
+    width: 425px;
+  }
+}
+/* Tab Bar
+ Animada para Mobile e Tablet */
+@media screen and (max-width: 480px) {
   .nav{
     display: none;
   }
@@ -161,7 +156,7 @@
 }
 
 /* Tablet */
-@media screen and (max-width: 1024px) {
+@media screen  and  (max-width: 1024px) {
   .inicio {
     flex-direction: column;
     text-align: center;
@@ -195,7 +190,7 @@
 /* Mobile */
 @media screen and (max-width: 768px) {
   .inicio {
-    margin-top: 15%;
+    margin-top: 5%;
     padding: 0 15px;
   }
 
@@ -232,8 +227,6 @@
 
   .textos {
     max-width: 90%;
-    text-align: center;
-    margin-left: 0%;
   }
 
   .text-inicio {
@@ -260,9 +253,15 @@
   .inicio {
     padding: 1rem;
   }
-
+  .sobre{
+    flex-direction: column;
+  }
+  .eu{
+    margin-left:20%;
+  }
   .text-inicio {
     font-size: 1.5rem;
+    margin-left: 10%;
   }
 
   .sobre.sub {
@@ -282,13 +281,9 @@
 /* Ajustes no carrossel para telas menores */
 @media (max-width: 768px) {
   .sobre {
-    flex-direction: column;
     padding: 1.5rem;
     height: 100%;
     margin-top: 70%;
-  }
-  .cont-proj {
-    margin-top: 50%;
   }
   .carrossel {
     width: 100%;
@@ -310,6 +305,7 @@
 
   .carrossel {
     max-width: 240px;
+    margin-right: 24%;
   }
 
   .carrossel .imagens img {
