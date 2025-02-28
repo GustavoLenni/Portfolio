@@ -3,16 +3,42 @@
   .chat {
     display: none; /* Esconde o botão circular em telas pequenas */
   }
-
-
-}
-
-/* Para dispositivos com tela muito pequena em altura */
-@media (max-height: 500px) {
-  .modal-chat {
-    height: 70vh;
+  
+  /* Mostra a barra de chat fixa no mobile */
+  .mobile-chat-button {
+    display: block;
+    border-radius:10px;
+    width: 80%;
   }
   
+  .modal-chat {
+    width: 92%;
+    max-width: 340px;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    right: auto;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+}
+
+/* Ajustes específicos para iPhone SE e outros dispositivos muito pequenos */
+@media (max-width: 375px) {
+  .modal-chat {
+    width: 90%;
+    height: 75vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .mobile-chat-button {
+    width: 62%;
+  }
   .chat-messages {
     padding: 10px;
   }
@@ -21,23 +47,73 @@
     padding: 8px 12px;
     font-size: 13px;
   }
-}
-
-
-/* Garantir que o modal nunca ultrapasse os limites da tela */
-@media (min-width: 320px) {
-  .mobile-chat-button {
-    width: 320px;
+  
+  .modal-header {
+    padding: 12px;
+  }
+  
+  .modal-header h3 {
+    font-size: 15px;
   }
 }
-@media (min-width: 375px) {
-  .mobile-chat-button {
-    width: 375px;
+
+/* Dispositivos muito pequenos */
+@media (max-width: 320px) {
+  .modal-chat {
+    width: 95%;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
-@media (min-width: 425px) {
-  .mobile-chat-button {
-    width: 425px;
+
+/* Para dispositivos com tela muito pequena em altura */
+@media (max-height: 500px) {
+  .modal-chat {
+    height: 85vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chat-messages {
+    padding: 8px;
+  }
+  
+  .message {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Ajustes para tablets e dispositivos médios */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .modal-chat {
+    width: 340px;
+    height: 480px;
+    bottom: 80px;
+    right: 15px;
+  }
+}
+
+/* Dispositivos móveis (landscape) */
+@media (max-width: 767px) and (orientation: landscape) {
+  .modal-chat {
+    width: 340px;
+    height: 85vh; /* Usando altura relativa para modo paisagem */
+    bottom: 70px;
+    right: 10px;
+  }
+}
+
+/* Grandes dispositivos (desktops e laptops) */
+@media (min-width: 1025px) {
+  .modal-chat {
+    width: 380px;
+    height: 520px;
+    bottom: 90px;
+    right: 20px;
   }
 }
 /* Tab Bar
