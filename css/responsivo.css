@@ -495,7 +495,9 @@
   .chat {
     display: none;
   }
-  
+  .close-modal{
+    margin-right: 15%;
+  }
   /* Mostra a barra de chat fixa no mobile */
   .mobile-chat-button {
     display: block;

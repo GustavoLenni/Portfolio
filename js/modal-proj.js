@@ -13,20 +13,15 @@ function abrirModal(projeto) {
         
         <div class="modal-gallery">
           <div class="gallery-item">
-            <img src="./images/refeitorio-banner.png" alt="Tela inicial">
+            <img src="./images/refeitorio-equipe.png" alt="Tela inicial">
           </div>
           <div class="gallery-item">
             <img src="./images/refeitorio-logo.png" alt="Logo Refeitório">
           </div>
         </div>
-        
-        <video class="modal-video" controls>
-          <source src="./videos/refeitorio-demo.mp4" type="video/mp4">
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-        
+
         <div class="modal-actions">
-          <a href="https://github.com/Guhxs1010/refeitorio" class="modal-btn btn-repo" target="_blank">
+          <a href="https://github.com/joaopbg06/semestral" class="modal-btn btn-repo" target="_blank">
             Repositório
           </a>
         </div>
@@ -37,15 +32,15 @@ function abrirModal(projeto) {
         <img src="./images/Orcamento-banner.png" alt="Projeto Orçamento Amigo" class="modal-banner">
         
         <div class="modal-description">
-          <p>Orçamento Amigo é um sistema para gerenciar suas compras com maior facilidade, oferecendo controle financeiro e organização de gastos.</p>
+          <p>Conheça os desenvolvedores do Orçamento Amigo e veja como baixar e utilizar o app de forma simples e eficiente!</p>
         </div>
         
         <div class="modal-gallery">
           <div class="gallery-item">
-            <img src="./images/Orcamento-banner.png" alt="Dashboard">
+            <img src="./images/felipeluz.png" alt="Dashboard">
           </div>
           <div class="gallery-item">
-            <img src="./images/Orcamento-logo.png" alt="Logo Orçamento">
+            <img src="./images/gustavolenni.png" alt="Logo Orçamento">
           </div>
         </div>
         
@@ -55,8 +50,8 @@ function abrirModal(projeto) {
         </video>
         
         <div class="modal-actions">
-          <a href="https://github.com/GustavoLenni/Orcamento" class="modal-btn btn-repo" target="_blank">
-            Repositório
+          <a href="https://expo.dev/accounts/guhxs/projects/OrcamentoAmigo/builds/6fd7e8bd-ef01-42e8-a5d7-2411cec024f3" class="modal-btn btn-repo" target="_blank">
+            Baixar
           </a>
         </div>
       `;
