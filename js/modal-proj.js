@@ -8,7 +8,7 @@ function abrirModal(projeto) {
       <img src="./images/refeitorio-banner.png" alt="Projeto Refeitório" class="modal-banner">
       
       <div class="modal-description">
-        <p>O Projeto Refeitório é um projeto educativo criado para a rede SESI de Ferraz pelo meu grupo do SENAI, com o objetivo de auxiliar a nutricionista e os alunos.</p>
+        <p>O Projeto Refeitório é uma iniciativa educativa desenvolvida pelo meu grupo do SENAI para a rede SESI de Ferraz. Criado com o objetivo de auxiliar a nutricionista e os alunos, o projeto busca otimizar a organização e o acompanhamento nutricional no refeitório.</p>
       </div>
       
       <div class="modal-gallery">
@@ -45,7 +45,7 @@ function abrirModal(projeto) {
       </div>
       
       <video class="modal-video" controls>
-        <source src="./videos/orcamento-demo.mp4" type="video/mp4">
+        <source src="./videos/Orcamento-amigo.mp4" type="video/mp4">
         Seu navegador não suporta vídeos HTML5.
       </video>
       

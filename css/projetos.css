@@ -508,9 +508,10 @@
   }
   
   .modal-content {
-    max-width: 92%;
+    max-width: 350px;
     border-radius: 12px;
     margin-top: 30px; /* Adiciona espaço no topo */
+    right: 10%;
   }
   
   .modal-info {
