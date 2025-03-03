@@ -1,16 +1,31 @@
-/* Ajuste para esconder o botão original e mostrar o botão mobile em telas menores */
+/* Ajustes otimizados para o modal de chat em dispositivos móveis */
 @media (max-width: 480px) {
-  .chat {
-    display: none; /* Esconde o botão circular em telas pequenas */
-  }
-  
-  /* Mostra a barra de chat fixa no mobile */
+  /* Botão de chat mobile - ajustado para melhor posicionamento */
   .mobile-chat-button {
     display: block;
-    border-radius:10px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border-radius: 10px 10px 0 0;
+    background-color: #3D56A5;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
-  
+
+  /* Esconde o botão circular em telas pequenas */
+  .chat {
+    display: none;
+  }
+
+  /* Modal de chat - centralizado e redimensionado para mobile */
   .modal-chat {
     width: 92%;
     max-width: 340px;
@@ -20,68 +35,109 @@
     transform: translate(-50%, -50%);
     bottom: auto;
     right: auto;
+    border-radius: 16px;
   }
 
+  /* Ajustes no header do modal de chat */
+  .modal-header {
+    border-radius: 16px 16px 0 0;
+    padding: 14px;
+  }
+
+  /* Ajuste no botão de fechar */
+  .close-modal {
+    font-size: 24px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  /* Área de mensagens ajustada */
+  .chat-messages {
+    padding: 12px;
+  }
+
+  /* Mensagens com largura ajustada para mobile */
   .message {
     max-width: 85%;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* Área de input ajustada */
+  .chat-input {
+    padding: 10px 12px;
+  }
+
+  .chat-input input {
+    padding: 10px 15px;
   }
 }
 
 /* Ajustes específicos para iPhone SE e outros dispositivos muito pequenos */
 @media (max-width: 375px) {
   .modal-chat {
-    width: 90%;
+    width: 95%;
+    max-width: 320px;
     height: 75vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
+
   .mobile-chat-button {
-    width: 62%;
+    width: 75%;
+    font-size: 15px;
+    padding: 10px 12px;
   }
+
   .chat-messages {
     padding: 10px;
   }
-  
+
   .message {
     padding: 8px 12px;
     font-size: 13px;
+    max-width: 82%;
   }
-  
+
   .modal-header {
     padding: 12px;
   }
-  
+
   .modal-header h3 {
     font-size: 15px;
   }
 }
 
-/* Dispositivos muito pequenos */
+/* Dispositivos extremamente pequenos */
 @media (max-width: 320px) {
   .modal-chat {
     width: 95%;
     height: 70vh;
-    top: 50%;
-    left: 27%;
-    transform: translate(-50%, -50%);
+    max-width: 290px;
   }
-  .modal-content{
-    width: 50%;
-    right: 20%;
-  }
-}
 
-@media (max-width: 375px) {
-  .modal-content{
-    width: 250px;
-    right: 20%;
+  .mobile-chat-button {
+    width: 85%;
+    font-size: 14px;
   }
-}
-@media (min-width: 480px) and (max-width:500px) {
-  .modal-content{
-    width: 75%;
-    right: 10%;
+
+  .message {
+    max-width: 80%;
+    font-size: 12px;
+  }
+
+  .chat-input input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .send-btn {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -89,48 +145,134 @@
 @media (max-height: 500px) {
   .modal-chat {
     height: 85vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
-  
-  .chat-messages {
-    padding: 8px;
+}
+
+/* ===== MODAL DE PROJETOS ===== */
+@media (max-width: 480px) {
+  /* Modal de projetos - centralizado para mobile */
+  .modal {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .message {
-    padding: 6px 10px;
+
+  .modal-content {
+    width: 90%;
+    max-width: 340px;
+    max-height: 90vh;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .modal-info {
+    padding: 18px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-right: 20px; /* Evita sobreposição com o botão fechar */
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .modal-gallery {
+    grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+  }
+}
+
+/* Ajustes para iPhone e outros dispositivos menores */
+@media (max-width: 375px) {
+  .modal-content {
+    width: 92%;
+    max-width: 320px;
+  }
+
+  .modal-info {
+    padding: 15px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .modal-description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .modal-close {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+}
+
+/* Dispositivos muito pequenos */
+@media (max-width: 320px) {
+  .modal-content {
+    width: 95%;
+    max-width: 290px;
+  }
+
+  .modal-info {
+    padding: 12px;
+  }
+
+  .modal-title {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .modal-description {
     font-size: 13px;
   }
-}
 
-/* Ajustes para tablets e dispositivos médios */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .modal-chat {
-    width: 340px;
-    height: 480px;
-    bottom: 80px;
-    right: 15px;
+  .modal-btn {
+    font-size: 14px;
+    padding: 10px 0;
   }
 }
 
-/* Dispositivos móveis (landscape) */
-@media (max-width: 767px) and (orientation: landscape) {
+/* Para dispositivos em modo paisagem */
+@media (max-height: 450px) and (orientation: landscape) {
   .modal-chat {
-    width: 340px;
-    height: 85vh; /* Usando altura relativa para modo paisagem */
-    bottom: 70px;
-    right: 10px;
+    height: 90vh;
+    width: 80%;
+    max-width: 400px;
   }
-}
 
-/* Grandes dispositivos (desktops e laptops) */
-@media (min-width: 1025px) {
-  .modal-chat {
-    width: 380px;
-    height: 520px;
-    bottom: 90px;
-    right: 20px;
+  .modal-content {
+    max-height: 90vh;
+  }
+
+  .modal-info {
+    max-height: 75vh;
   }
 }
 /* Tab Bar
